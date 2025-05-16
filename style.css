@@ -1,0 +1,146 @@
+:root {
+    --green-500: hsl(158, 36%, 37%);
+    --green-700: hsl(158, 42%, 18%);
+    --black: hsl(212, 21%, 14%);
+    --gray: hsl(228, 12%, 48%);
+    --cream: hsl(30, 38%, 92%);
+    --white: hsl(0, 0%, 100%);
+
+    --text-s1: 2rem;
+    --text-s2: 0.875rem;
+    --text-s3: 0.75rem;
+    --text-s4: 0.8125rem;
+
+    --montserrat: "Montserrat", sans-serif;
+    --fraunces: "Fraunces", serif;
+}
+
+html {
+    font-size: 16px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cream);
+    height: 100vh;
+}
+
+/* Üst taraf başlangıç için yazdıklarımdı*/
+img {
+    width: 100%;
+}
+
+h2 {
+    font-family: var(--montserrat);
+    font-weight: 500;
+    font-size: var(--text-s3);
+    color: var(--green-500);
+    text-transform: uppercase;
+    letter-spacing: 0.3125rem;
+}
+
+h1 {
+    font-family: var(--fraunces);
+    font-size: var(--text-s1);
+}
+
+.content {
+    font-family: var(--montserrat);
+    font-size: var(--text-s2)
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.second_part {
+    background-color: var(--white);
+    padding: 32px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.second_part-inside {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.price_part {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+}
+
+.price_part-big {
+    color: var(--green-500);
+    font-family: var(--fraunces);
+    font-size: var(--text-s1);
+    font-weight: 700;
+}
+
+.price_part-small {
+    font-size: var(--text-s4);
+    color: var(--gray);
+    text-decoration: line-through;
+}
+
+.cart-button {
+    background-color: var(--green-500);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    border: none;
+    font-weight: 700;
+    font-family: var(--montserrat);
+}
+
+.cart-button:hover {
+    background-color: var(--green-700);
+    cursor: pointer;
+}
+
+.cart-button span {
+    color: var(--white);
+    font-size: var(--text-s2);
+}
+
+
+/*************************Responsive Desktop Design**************************************/
+
+@media (min-width:37.5rem) {
+
+    .card {
+        flex-direction: row;
+        width: 37.5rem;
+    }
+
+    .perfume_img img {
+        height: 100%;
+        width: 18.75rem;
+    }
+
+    .second_part {
+        gap: 2rem;
+    }
+}
